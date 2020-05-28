@@ -1,5 +1,31 @@
 <h1>New Activity</h1>
 
+<label for="activity-select">Choose an activity:</label>
+
+<select name="activities" id="activity-select">
+    <option value="">Please choose an option</option>
+    <option value="Swimming">Swimming</option>
+    <option value="Cycling">Cycling</option>
+    <option value="Snow-boarding">Snow-boarding</option>
+
+    <option value="Running">Running</option>
+    <option value="Skiing">Skiing</option>
+    <option value="Rowing">Rowing</option>
+
+    <option value="Weight-lifting">Weight-lifting</option>
+    <option value="Skating">Skating</option>
+    <option value="Core Strength">Core Strength</option>
+    <option value="Mountain Climbing">Mountain Climbing</option>
+    <option value="Jogging">Jogging</option>
+    <option value="Hiking">Hiking</option>
+    <option value="Push-ups">Push-ups</option>
+
+
+
+
+</select>
+
+
 <input type="date">
 <input type="time">
 <input type="time">
@@ -7,3 +33,28 @@
 <%= render 'form', activity: @activity %>
 
 <%= link_to 'Back', activities_path %>
+
+
+<div class="select animated zoomIn">
+    <!-- You can toggle select (disabled) -->
+    <input type="radio" name="option" class="inp">
+    <i class="toggle icon icon-arrow-down"></i>
+    <i class="toggle icon icon-arrow-up"></i>
+    <span class="placeholder">Choose...</span>
+    <label class="option">
+        <input type="radio" name="option">
+        <span class="title animated fadeIn"><i class="icon icon-speedometer"></i>Speedometer</span>
+    </label>
+    <label class="option">
+        <input type="radio" name="option">
+        <span class="title animated fadeIn"><i class="icon icon-fire"></i>Fire</span>
+    </label>
+    <label class="option">
+        <input type="radio" name="option" >
+        <span class="title animated fadeIn"><i class="icon icon-handbag"></i>Handbag</span>
+    </label>
+    <label class="option">
+        <input type="radio" name="option">
+        <span class="title animated fadeIn"><i class="icon icon-badge"></i>Badge</span>
+    </label>
+</div>

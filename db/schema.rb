@@ -22,3 +22,7 @@ ActiveRecord::Schema.define(version: 2020_05_25_172841) do
   end
 
 end
+
+
+
+# Activity.create(name: "swimming", date: "2020-05-10", start_time: "08:00:00", end_time: "10:00:00")
