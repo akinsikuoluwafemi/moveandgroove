@@ -1,5 +1,46 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 .navbar {
-    background-color: #777!important;
+    background: #15323A!important;
+
+
+}
+
+.auth {
+    color: white;
+    text-decoration: none!important;
+}
+
+.auth:hover{
+    color: white!important;
+}
+
+.text__container {
+    color: white;
+
+    &--heading {
+
+    }
+    &--one {
+        font-size: 80px!important;
+        font-family: 'Fira Sans', sans-serif;
+
+    }
+    &--two {
+        font-size: 80px!important;
+        font-family: 'Fira Sans', sans-serif;
+        
+    }
+}
+
+#dark {
+   background: #181818!important;
+}
+
+#footer, #nav {
+    background: #15323A;
+}
+
+.jumbotron {
+    background: #181818;
 }
