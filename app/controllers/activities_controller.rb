@@ -10,6 +10,9 @@ class ActivitiesController < ApplicationController
   # GET /activities/1
   # GET /activities/1.json
   def show
+    @activity = Activity.find(params[:id])
+    @am = "AM"
+    @pm = "PM"
   end
 
   # GET /activities/new

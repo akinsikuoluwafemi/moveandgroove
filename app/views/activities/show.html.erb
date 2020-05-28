@@ -1,4 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<h1>Showing activity details</h1>
+
+<p> Activity name: <%= @activity.name%></p>
+<p>Activity Date: <%= @activity.date%> </p>
+
+
+
+<p> Start at: <%=  Time.now.strftime(@activity.start_time.to_s)[11..15] + @am %> </p>
+
+<p>End at: <%= Time.now.strftime(@activity.end_time.to_s)[11..15] + @pm %> </p>
+
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>

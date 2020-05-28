@@ -1,10 +1,12 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+body {
+}
 .navbar {
     background: #15323A!important;
-
-
 }
+
+
 
 .auth {
     color: white;
@@ -31,6 +33,9 @@
         font-family: 'Fira Sans', sans-serif;
         
     }
+}
+.text-hero {
+    color: #4831D4;
 }
 
 #dark {
