@@ -11,6 +11,41 @@
     </div>
   <% end %>
 
+  <div class="form-group">
+    <%= form.label "Choose an activity", class: "control-label"%>
+    <div class="controls">
+      <%= form.select(:name, options_for_select([["Swimming", "Swimming"], ["Cycling", "Cycling"],  ["Snow-boarding", "Snow-boarding"],  ["Running", "Running"],  ["Skiing", "Skiing"],  ["Rowing", "Rowing"],  ["Weight-lifting", "Weight-lifting"],  ["Skating", "Skating"],  ["Core Strength", "Core Strength"],  ["Mountain-Climbing", "Mountain-Climbing"],  ["Jogging", "Jogging"],  ["Hiking", "Hiking"],  ["Push-ups", "Push-ups"], ]))%>
+    </div>
+
+    <div>
+      <%= form.label :date%>
+      <%= form.date_select :date%>
+    </div>
+
+    <div>
+      <%= form.label :start_time %><br>
+      <%=
+        form.time_field :start_time,
+          value: "%H:%M",
+          min: 'hh:mm:ss',
+          max: 'hh:mm:ss'
+      %>
+    </div>
+
+    <div>
+      <%= form.label :end_time %><br>
+      <%=
+        form.time_field :end_time,
+          value: "%H:%M",
+          min: 'hh:mm:ss',
+          max: 'hh:mm:ss'
+      %>
+    </div>
+
+  </div>
+
+  
+
   <div class="actions">
     <%= form.submit %>
   </div>
