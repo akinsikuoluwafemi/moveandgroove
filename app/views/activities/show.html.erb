@@ -7,9 +7,9 @@
 
 
 
-<p> Start at: <%=  Time.now.strftime(@activity.start_time.to_s)[11..15] + @am %> </p>
+<p> Start at: <%=  @activity.start_time%> </p>
 
-<p>End at: <%= Time.now.strftime(@activity.end_time.to_s)[11..15] + @pm %> </p>
+<p>End at: <%= @activity.end_time %> </p>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>
