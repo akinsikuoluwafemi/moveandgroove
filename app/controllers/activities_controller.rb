@@ -11,8 +11,8 @@ class ActivitiesController < ApplicationController
   # GET /activities/1.json
   def show
     @activity = Activity.find(params[:id])
-    @am = "AM"
-    @pm = "PM"
+    # @am = "AM"
+    # @pm = "PM"
   end
 
   # GET /activities/new
@@ -22,6 +22,9 @@ class ActivitiesController < ApplicationController
 
   # GET /activities/1/edit
   def edit
+    
+    @activity = Activity.find(params[:id])
+    
   end
 
   # POST /activities
@@ -73,6 +76,6 @@ class ActivitiesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def activity_params
-      params.fetch(:activity, {})
+      params.fetch(:activity, {}).permit(:name, :date, :start_time, :end_time)
     end
 end
