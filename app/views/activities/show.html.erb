@@ -6,6 +6,7 @@
 <p>Activity Date: <%= @activity.date%> </p>
 <p>Start Time: <%=@activity.start_time %></p>
 <p>End Time: <%=@activity.end_time %></p>
+<p> by <%= @activity.user.email.split('@')[0].capitalize if @activity.user %> </p>
 
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Delete', activity_path(@activity), method: :delete, data: { confirm: 'Are you sure?' } %> |
