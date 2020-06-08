@@ -1,42 +1,144 @@
+<div>
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col">  
+                    <div class="">
+                        <div class="text-center text__container">
+                            <div class="text__container--heading" style="color: #1E8060">
+                                <p class="display-4 text__container--one">Bring every</p>
+                                <p class="display-4 text__container--two"><span >Activity</span> to life.</p>
+                            </div>
+                            <p class="lead text-dark">Move and Groove is the number one activity tracking tool.</p>
 
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col">  
-                <div class="">
-                    <div class="text-center text__container">
-                        <div class="text__container--heading" style="color: #1E8060">
-                            <p class="display-4 text__container--one">Bring every</p>
-                            <p class="display-4 text__container--two"><span >Activity</span> to life.</p>
+                            <% if user_signed_in? %>
+                                <button class="btn btn-outline-success btn-lg" href="#" role="button">  <%=link_to "See all Activities", activities_path, class: "auth text-success"%> <span><i class="fas fa-arrow-right"></i></span></button>
+                            <%else%>
+                                <button class="btn btn-outline-success btn-lg " href="#" role="button">  <%=link_to "Sign up for free", new_user_registration_path, class: "auth text-success"%> <span><i class="fas fa-arrow-right"></i></span></button>
+                            <%end%>
+
+                            
                         </div>
-                        <p class="lead text-dark">Move and Groove is the number one activity tracking tool.</p>
-
-                        <% if user_signed_in? %>
-                            <button class="btn btn-outline-success btn-lg" href="#" role="button">  <%=link_to "See all Activities", activities_path, class: "auth text-dark"%> <span><i class="fas fa-arrow-right"></i></span></button>
-                        <%else%>
-                            <button class="btn btn-outline-success btn-lg " href="#" role="button">  <%=link_to "Sign up for free", new_user_registration_path, class: "auth text-dark"%> <span><i class="fas fa-arrow-right"></i></span></button>
-                        <%end%>
-
-                        
                     </div>
                 </div>
             </div>
+
         </div>
 
     </div>
 
-</div>
 
+    <div class="bg-green">
+        <div class="container ">
+            <div class="row">
+                <div class="col py-5  ">
+                    <div >
+                        <h1 class="text-white">Bring your activities online.</h1>
+                        <p class="text-white font-weight-light">Create your own personal activity to enable you have a healthy life, and manage your day to day.</p>
+                        <p class="text-white font-weight-light">Explore more activities...</p>
+                
+                    </div>   
+                </div>        
+            </div>
 
-<div>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                lorem20
-            </div>        
+            <div class="row pb-5">
+                <div class="col-12 col-md-6 col-lg-3 pb-3 pb-sm-3">
+                    <div class="activities__card--container">
+
+                            <div class="card " >
+                                <%= image_tag(('running.jpg'), :class => "card-img-top")%>
+                                <div class="card-body">
+                                    <p class="card-text badge badge-primary">Running</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 pb-3 pb-sm-3">
+                    <div class="activities__card--container">
+
+                            <div class="card" >
+                                <%= image_tag(('wl.jpg'), :class => "card-img-top")%>
+                                <div class="card-body">
+                                    <p class="card-text badge badge-primary">Weight Lifting</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3 pb-3 pb-sm-3">
+                    <div class="activities__card--container">
+
+                            <div class="card" >
+                                <%= image_tag(('swimming.jpg'), :class => "card-img-top")%>
+                                <div class="card-body">
+                                    <p class="card-text badge badge-primary">Swimming</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="activities__card--container">
+
+                            <div class="card" >
+                                <%= image_tag(('cycling.jpg'), :class => "card-img-top")%>
+                                <div class="card-body">
+                                    <p class="card-text badge badge-primary">Cycling</p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        
+            </div>
+
         </div>
+
+    </div>
+
+
+
+    <div class=" ">
+
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-12 col-lg-6  pr-4">
+                    <p class="physio-text"> Get the help you need from our top physio expert.</p>
+
+                    <div>
+                        <p>Here are some tips to stay safe and injury-free:</p>
+                        <ul>
+                            <li> Be aware of your body. Think about how the particular exercise is making you feel.</li>
+                            <li> Warm up and cool down. </li>
+                            <li>Pace yourself.</li>
+                            <li>Mix it up</li>
+                            <li>Strap or tape</li>
+                            <li>Stay hydrated</li>
+                            <li>Be weather aware</li>
+
+                        </ul>
+                    </div>
+
+                    <button class="btn btn-outline-success">Meet an expert</button>
+                    
+                </div>
+
+                
+
+                <div class="col-12 col-lg-6  bg-expert  py-3">
+                    <%= image_tag(('trainer.jpg'), :class => "img-fluid")%>
+                    
+                </div>
+            
+            
+            </div>
+        
+        </div>
+
+
+
+
+
     </div>
 
 </div>
-
-

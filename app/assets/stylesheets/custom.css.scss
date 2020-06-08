@@ -1,19 +1,77 @@
 @import 'bootstrap/dist/css/bootstrap';
 
 
+body {
+    // background: #D3D3D3;
+    // overflow-x: hidden;
+}
+
 .navbar {
     background: #15323A!important;
 }
 
+.badge-primary {
+    background: #D3D3D3!important;
+    color: #222;
+    font-weight: normal;
+}
 
+// .bg-expert {
+//     background-image: url('../images/trainer')
+// }
+
+.shadow {
+    border-radius: 5px;
+   
+}
+
+.expert-image {
+    // height: 401px!important;
+    // width:  565px!important;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.physio-text {
+    font-size: 2rem;
+    letter-spacing: .5px;
+}
+
+.img-fluid {
+    // height: 100vh!important;
+}
+
+.bg-white {
+    // height: 500px!important;
+}
+
+.card-img-top {
+    height: 170px!important;
+}
+
+.activities__card--container {
+    // border: 1px solid #F6F6F6;
+    border-radius: 5px;
+}
+
+button:hover>.auth {
+    color: whitesmoke!important;
+}
 
 .auth {
     color: white;
-    text-decoration: none!important;
 }
 
+.bg-green {
+    background: #0D4C3F;
+}
 .auth:hover{
     color: white!important;
+    text-decoration: none!important;
+
 }
 
 .text__container {
@@ -47,6 +105,7 @@
 
 .jumbotron {
     background: #FBF7ED;
+    margin: 0;
     // background: transparent;
 }
 
