@@ -1,64 +1,69 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-
-    <%# start %>
-      <%= form_with(model: @activity, local: true) do |form| %>
-        <% if activity.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
-
-            <ul>
-              <% activity.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-              <% end %>
-            </ul>
-          </div>
-        <% end %>
-
-    <%# beginning of form %>
-
-      <div class="form-group m-auto">
-        <%= form.label "Choose an activity", class: "control-label"%>
-
-        <div class="controls ">
-          <%= form.select(:name, ([["Swimming", "Swimming"], ["Cycling", "Cycling"],  ["Snow-boarding", "Snow-boarding"],  ["Running", "Running"],  ["Skiing", "Skiing"],  ["Rowing", "Rowing"],  ["Weight-lifting", "Weight-lifting"],  ["Skating", "Skating"],  ["Core Strength", "Core Strength"],  ["Mountain-Climbing", "Mountain-Climbing"],  ["Jogging", "Jogging"],  ["Hiking", "Hiking"],  ["Push-ups", "Push-ups"], ]), { include_blank: true })%>
-      </div>
 
 
-      <div>
-          <%= form.label :date%>
-          <%= form.date_select :date%>
-      </div>
+  <div class="container ">
+    <div class="row ">
 
-        <div>
-          <%= form.label :start_time %><br>
-          <%=
-            form.time_field :start_time %>
-            
+      <div class="col-sm-12 col-lg-3"></div>
+
+      <div class="col-sm-12 col-lg-6">
+        <div class="shadow border px-4 py-4 mb-4">
+        <%# start %>
+          <%= form_with(model: @activity, local: true) do |form| %>
+            <% if activity.errors.any? %>
+              <div id="error_explanation">
+                <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
+
+                <ul>
+                  <% activity.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <%# beginning of form %>
+
+            <div class="form-group m-auto">
+            <%= form.label "Choose an activity", class: "control-label"%>
+
+            <div class="controls w-50">
+              <%= form.select(:name, ([["Swimming", "Swimming"], ["Cycling", "Cycling"],  ["Snow-boarding", "Snow-boarding"],  ["Running", "Running"],  ["Skiing", "Skiing"],  ["Rowing", "Rowing"],  ["Weight-lifting", "Weight-lifting"],  ["Skating", "Skating"],  ["Core Strength", "Core Strength"],  ["Mountain-Climbing", "Mountain-Climbing"],  ["Jogging", "Jogging"],  ["Hiking", "Hiking"],  ["Push-ups", "Push-ups"], ]), { include_blank: true }, class: "form-control")%>
+            </div>
+
+            <br>
+
+            <div>
+                <%= form.label :date%>
+                <%= form.date_select :date%>
+            </div>
+
+              <div>
+                <%= form.label :start_time %>
+                <%= form.time_field :start_time %>   
+              </div>
+
+            <div>
+              <%= form.label :end_time %>
+              <%= form.time_field :end_time %>
+            </div>
+
+            </div>
+
+            <%# end of form group %>
+            <div class="actions">
+              <%= form.submit %>
+            </div>
+          <% end %>
         </div>
 
-        <div>
-          <%= form.label :end_time %><br>
-          <%=
-            form.time_field :end_time %>
-        </div>
-
+        <%# end %>
+      
       </div>
 
-      <%# end of form group %>
-      <div class="actions">
-        <%= form.submit %>
-      </div>
-    <% end %>
+      <div class="col-sm-12 col-lg-3"></div>
 
-
-    <%# end %>
-    
     </div>
   </div>
-</div>
-
   
 
 

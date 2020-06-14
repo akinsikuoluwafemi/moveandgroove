@@ -111,6 +111,29 @@ button:hover>.auth {
     background: #FBF7ED;
     margin: 0;
     // background: transparent;
+    background-image: url(yogateam.jpg);
+    // height: 100vh;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media(max-width: 425px){
+
+    .jumbotron {
+        background-position: center;
+
+    }
+
+}
+
+.bg-new {
+    background-image: url(snow.jpg);
+    // height: 100vh;
+    background-color: #AAC9CE;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 // select {
