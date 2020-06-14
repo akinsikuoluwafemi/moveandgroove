@@ -136,6 +136,49 @@ button:hover>.auth {
     background-size: cover;
 }
 
+label {
+    // font-size: 1.5rem;
+    letter-spacing: .2rem;
+    font-weight: 200;
+}
+
+.card-col {
+    background: #77CC6C;
+    opacity: .8;
+}
+
+.text-success, .btn-success {
+    color: #77CC6C!important;
+}
+
+.actions {
+    display: inline-block;
+    // margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.actions > input {
+    color: #0D4C3F!important;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 5rem;
+    border: none;
+  
+}
+
+.actions > input:hover {
+    // color: #0D4C3F!important;
+    // margin: 0 auto;
+    // text-align: center;
+    // padding: 5px 15px;
+    // border-radius: 5rem;
+    // border: none;
+    background: #77CC6C!important;
+    color: #fff!important;
+    transition: background-color.3s ease-in;
+    opacity: 8!important;
+}
 // select {
 //    -webkit-appearance: none;
 //    -moz-appearance: none;
