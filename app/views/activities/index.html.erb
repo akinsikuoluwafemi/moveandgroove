@@ -1,62 +1,65 @@
 <div class="container">
+   <p id="notice"><%= notice %></p>
+ 
+  <h1 class="text-center text-head text-success">Activities Listing page</h1>
 
-  <div class="row">
-    <div class="col">
+  <div class="rowe">
+      <%# 1 %>
+     
+     <% @activities.each do |activity| %>
+        <div class="">
+              <%#  %>
+          <div class="out-card border-info">
+            <div class="main-card">
+            <div class="inner-card">
+              <div class="user-info">
+                <div class="round">
+                  <%# <img src="" alt="user" > %>
+                </div>
+                <div class="user-name">
+                  <span class="name">Allison Hill</span>
+                  <span class="email">akinsiku.o@yahoo.com</span>
+                </div>
+                  
+              </div>
+          
+              <div class="activity-stats">
+                <p class="activity-name"><%= activity.name %></p>
+                <p class="activity-date">On: <%= activity.date.strftime("%B/%d/%Y") %></p>
+                <p class="activity-time">For About: 2hrs 30 min</p>
+              </div>
+            
+            </div>
+          </div>
+    
+          <div class="time-in">
+            <span class="badge">Created: 15m ago </span>
+            <span class="badge">Edited: 10m ago </span>
+        
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-ellipsis-v"></i>
+                </button>
+        
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+                  <a class="dropdown-item text-info" href="#"><i class="fas fa-compress-alt"></i></a>
+                  <a class="dropdown-item text-info" href="#"><i class="fas fa-pencil-alt"></i></a>
+                  <a class="dropdown-item text-danger" href="#"><i class="fas fa-trash-alt"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
 
-      <%# start %>
+    <%end%> 
 
-          <p id="notice"><%= notice %></p>
 
-          <h1>Activities Listing page</h1>
+     
 
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Start Time</th>
-                <th>End Time</th>
 
-                <th colspan="3">Actions</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <% @activities.each do |activity| %>
-                <% if current_user.id == activity.user_id %>
-                  <tr>
-
-                    <td><%= activity.name %></td>
-                    <td><%= activity.date.strftime("%Y/%m/%d") %></td>
-
-                    <td><%= Time.now.strftime(activity.start_time.to_s)[11..15] %></td>
-                    <td><%= Time.now.strftime(activity.end_time.to_s)[11..15] %></td>
-                    <td> <%= link_to "Show", activity_path(activity) %> </td>
-                    <td> <%= link_to "Edit", edit_activity_path(activity) %> </td>
-                    <td> <%= link_to "Delete", activity_path(activity), method: :delete, data: { confirm: 'Are you sure?' } %> </td>
-                    <td> by <%= activity.user.email.split('@')[0].capitalize if activity.user %> </td>
-
-                </tr>
-                
-              
-                <% end %>
-              
-              <% end %>
-            </tbody>
-          </table>
-
-          <br>
-
-          <p>
-          <%= link_to 'New Activity', new_activity_path %>
-          </p>
-
-      <%# end %>
-
-    </div>
-  
   </div>
-
 </div>
+
+
 
 
