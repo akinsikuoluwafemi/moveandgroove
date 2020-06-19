@@ -215,12 +215,12 @@ label {
 
 .user-info {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 .round {
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
     border-radius: 50%;
     background: #000;
 }
@@ -273,9 +273,12 @@ label {
     background: rgba(187, 181, 181, 0.625);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     // flex-direction: column;
-    padding: 1rem 2rem;
+    padding: .5rem 1rem;
+    // max-width: 400px;
+    // flex-wrap: no-wrap;
+
 }
 
 .dropdown-toggle::after {
@@ -302,6 +305,21 @@ label {
     justify-content: space-around;
     margin: auto;
 }
+
+.bg-rowe {
+    opacity: .8;
+    background-image: url(sky.jpg);
+    // height: 100vh;
+    background-color: #AAC9CE;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+
 
 .rowe > * {
     margin-bottom: 1rem;
