@@ -2,12 +2,15 @@
 
 
 body {
+    font-family: 'Inconsolata', monospace;
+
     // background: #D3D3D3;
     // overflow-x: hidden;
 }
 
 .text-head {
     font-family: 'Raleway', sans-serif;
+
 }
 
 .navbar {
@@ -128,10 +131,10 @@ button:hover>.auth {
 }
 
 .bg-new {
-    background-image: url(snow.jpg);
+    background-image: url(skate.jpg);
     // height: 100vh;
     background-color: #AAC9CE;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -143,8 +146,8 @@ label {
 }
 
 .card-col {
-    background: #77CC6C;
-    opacity: .8;
+    // background: #77CC6C;
+    opacity: .9;
 }
 
 .text-success, .btn-success {
@@ -200,6 +203,7 @@ label {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     padding: 1.3rem;
+    opacity: .8;
 }
 .out-card {
     max-width: 400px;
@@ -307,7 +311,7 @@ label {
 }
 
 .bg-rowe {
-    opacity: .8;
+    // opacity: .9;
     background-image: url(sky.jpg);
     // height: 100vh;
     background-color: #AAC9CE;
@@ -315,6 +319,16 @@ label {
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+
+.bg-edit {
+    opacity: .8;
+    background-image: url(row.jpg);
+    // height: 100vh;
+    background-color: #AAC9CE;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 

@@ -9,41 +9,53 @@
         <div class="shadow border px-sm-3 py-sm-3 mb-4 card-col">
         <%# start %>
           <%= form_with(model: @activity, local: true) do |form| %>
+          <%#  %>
+          
+          <%#  %>
             <% if activity.errors.any? %>
-              <div id="error_explanation">
+              
+              <div class="alert  alert-dismissible fade show" role="alert">
+               <div id="error_explanation" class="text-white">
                 <h2><%= pluralize(activity.errors.count, "error") %> prohibited this activity from being saved:</h2>
 
                 <ul>
                   <% activity.errors.full_messages.each do |message| %>
-                    <li><%= message %></li>
+                    <li ><%= message %></li>
                   <% end %>
                 </ul>
               </div>
+            <button type="button" class="close text-danger" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+             
+
             <% end %>
 
             <%# beginning of form %>
 
             <div class="form-group m-auto">
-            <%= form.label "Choose an activity", class: "control-label"%>
+            <%= form.label "Choose an activity", class: "control-label text-white"%>
 
             <div class="controls  mw-100">
-              <%= form.select(:name, ([["Swimming", "Swimming"], ["Cycling", "Cycling"],  ["Snow-boarding", "Snow-boarding"],  ["Running", "Running"],  ["Skiing", "Skiing"],  ["Rowing", "Rowing"],  ["Weight-lifting", "Weight-lifting"],  ["Skating", "Skating"],  ["Core Strength", "Core Strength"],  ["Mountain-Climbing", "Mountain-Climbing"],  ["Jogging", "Jogging"],  ["Hiking", "Hiking"],  ["Push-ups", "Push-ups"], ]), { include_blank: true }, class: "form-control")%>
+              <%= form.select(:name, ([["Swimming", "Swimming"], ["Cycling", "Cycling"],  ["Snow-boarding", "Snow-boarding"],  ["Running", "Running"],  ["Skiing", "Skiing"],  ["Rowing", "Rowing"],  ["Weight-lifting", "Weight-lifting"],  ["Skating", "Skating"],  ["Core Strength", "Core Strength"],  ["Mountain-Climbing", "Mountain-Climbing"],  ["Jogging", "Jogging"],  ["Hiking", "Hiking"],  ["Push-ups", "Push-ups"], ]), { include_blank: true }, class: "form-control ")%>
             </div>
 
             <br>
 
             <div class="" >
-                <%= form.label :date%>
+                <%= form.label :date, class: 'text-white'%>
                 <%= form.date_select :date%>
             </div>
 
               <div >
-                <%= form.label :start_time %>
+                <%= form.label :start_time, class: 'text-white' %>
                 <%= form.time_field :start_time %>   
               </div>
 
             <div>
-              <%= form.label :end_time %>
+              <%= form.label :end_time , class: 'text-white'%>
               <%= form.time_field :end_time %>
             </div>
 
