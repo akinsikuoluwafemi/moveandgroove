@@ -12,7 +12,10 @@
 
                   
                     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-                    
+                      <div class="field form-group">
+                        <%= f.label :username, for: "exampleInputUsername" %> <br />
+                        <%= f.text_field :username, autofocus: true, class: "form-control", id: "exampleInputUsername" %>
+                      </div>
                       
                       <div class="field form-group">
                         <%= f.label :email, for: "exampleInputEmail1" %> <br />
