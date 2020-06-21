@@ -16,8 +16,8 @@
                     <%# <img src="" alt="user" > %>
                   </div>
                   <div class="user-name">
-                    <span class="name"><%= @activity.user.email.split('@')[0].capitalize if @activity.user %></span>
-                    <span class="email">akinsiku.o@yahoo.com</span>
+                    <span class="name"><%= @activity.user.username if @activity.user %></span>
+                    <span class="email"><%= @activity.user.email %></span>
                   </div>
                     
                 </div>
