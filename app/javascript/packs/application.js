@@ -17,7 +17,18 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 import "bootstrap"
 import "@fortawesome/fontawesome-free/js/all";
-//=require custom
 
+
+
+import flatpickr from "flatpickr"
+require("flatpickr/dist/flatpickr.css")
+
+document.addEventListener("turbolinks:load", () => {
+  flatpickr("[data-controller='flatpickr']", {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d",
+  })
+})
 
 import "controllers"
