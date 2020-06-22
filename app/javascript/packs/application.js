@@ -20,15 +20,19 @@ import "@fortawesome/fontawesome-free/js/all";
 
 
 
-import flatpickr from "flatpickr"
-require("flatpickr/dist/flatpickr.css")
+// import flatpickr from "flatpickr"
+// require("flatpickr/dist/flatpickr.css")
 
-document.addEventListener("turbolinks:load", () => {
-  flatpickr("[data-controller='flatpickr']", {
-    altInput: true,
-    altFormat: "F j, Y",
-    dateFormat: "Y-m-d",
-  })
-})
+// document.addEventListener("turbolinks:load", () => {
+//   flatpickr("[data-controller='flatpickr']", {
+//     altInput: true,
+//     altFormat: "F j, Y",
+//     dateFormat: "Y-m-d"
+//   })
+// })
 
 import "controllers"
+
+const webpacaker = 'hELO FROM WEBPACk dev server';
+console.log(webpacaker)
+

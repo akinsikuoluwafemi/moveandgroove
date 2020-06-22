@@ -14,12 +14,12 @@
                     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
                       <div class="field form-group">
                         <%= f.label :username, for: "exampleInputUsername" %> <br />
-                        <%= f.text_field :username, autofocus: true, class: "form-control", id: "exampleInputUsername" %>
+                        <%= f.text_field :username, autofocus: true, class: "form-control", id: "exampleInputUsername", placeholder: "Enter a Username" %>
                       </div>
                       
                       <div class="field form-group">
                         <%= f.label :email, for: "exampleInputEmail1" %> <br />
-                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "exampleInputEmail1" %>
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "exampleInputEmail1",  placeholder: "Enter an Email" %>
                       </div>
 
                       <div class="field form-group">
@@ -27,12 +27,12 @@
                         <% if @minimum_password_length %>
                         <small id="passwordHelp" class="form-text text-muted">  <em>(<%= @minimum_password_length %> characters minimum)</em> </small>
                         <% end %>
-                        <%= f.password_field :password, autocomplete: "new-password",id: "exampleInputPassword1", class: "form-control", type: "password", aria_describedby: "passwordHelp"  %>
+                        <%= f.password_field :password, autocomplete: "new-password",id: "exampleInputPassword1", class: "form-control", type: "password", aria_describedby: "passwordHelp",  placeholder: "Enter a Password"  %>
                       </div>
 
                       <div class="field form-group">
                         <%= f.label :password_confirmation, for: "Passwordconfirmation" %><br />
-                        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", id: "Passwordconfirmation" %>
+                        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", id: "Passwordconfirmation",  placeholder: "Confirm your password" %>
                       </div>
 
                       <div class="actions">

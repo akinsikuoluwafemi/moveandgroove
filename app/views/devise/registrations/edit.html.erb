@@ -13,7 +13,7 @@
 
           <div class="field form-group">
             <%= f.label :email, for: "exampleInputEmail1"  %> 
-            <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: "form-control", id: "exampleInputEmail1" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email",  class: "form-control", id: "exampleInputEmail1",  placeholder: "Your new Email" %>
           </div>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -22,7 +22,7 @@
 
           <div class="field form-group">
             <%= f.label :password, for: "Passwordconfirmation" %> <i>(leave blank if you don't want to change it)</i><br />
-            <%= f.password_field :password, autocomplete: "new-password", id: "Passwordconfirmation", class: "form-control" %>
+            <%= f.password_field :password, autocomplete: "new-password", id: "Passwordconfirmation", class: "form-control", placeholder: "Your new Password" %>
             <% if @minimum_password_length %>
               <small><em><%= @minimum_password_length %> characters minimum</em></small>
             <% end %>
@@ -30,12 +30,12 @@
 
           <div class="field form-group">
             <%= f.label :password_confirmation, for: "Passwordconfirmation" %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", id: "Passwordconfirmation" , class: "form-control" %>
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", id: "Passwordconfirmation" , class: "form-control", placeholder: "Confirm Your password" %>
           </div>
 
           <div class="field form-group">
             <%= f.label :current_password, for: "newPassword" %> <i>(we need your current password to confirm your changes)</i><br />
-            <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control", id: "newPassword", class:"form-control" %>
+            <%= f.password_field :current_password, autocomplete: "current-password", class: "form-control", id: "newPassword", class:"form-control", placeholder: "Your current Password" %>
           </div>
 
           <div class="actions">
