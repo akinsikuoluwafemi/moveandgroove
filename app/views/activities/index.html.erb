@@ -4,61 +4,14 @@
   
     <h1 class="text-center text-head text-white py-4">Activities Listing page</h1>
 
-    <div class="rowe pb-4">
-        <%# 1 %>
-      
-      <% @activities.each do |activity| %>
+     <div class="flickr_pagination py-3">
+      <%= will_paginate @activities, :container => false %>
+    </div>
+   
+    <%= render 'activity' %>
 
-          <div class="">
-                <%#  %>
-            <div class="out-card border-info shadow">
-              <div class="main-card">
-              <div class="inner-card">
-                <div class="user-info">
-                  <div class="round">
-                    <%# <img src="" alt="user" > %>
-                  </div>
-                  <div class="user-name">
-                    <span class="name"><%= activity.user.username if activity.user %></span>
-                    <span class="email"><%= activity.user.email if activity.user %></span>
-                  </div>
-                    
-                </div>
-            
-                <div class="activity-stats">
-                  <p class="activity-name font-italic"><%= link_to activity.name, activity_path(activity), class: "text-success"  %></p>
-
-                  <p class="activity-date">On: <%= activity.date.strftime("%B/%d/%Y") %></p>
-                  <p class="activity-time">For About: 2hrs 30 min</p>
-                </div>
-              
-              </div>
-            </div>
-      
-            <div class="time-in shadow">
-              <small><span class="badge  badge-info">Created</span>:<%= time_ago_in_words(activity.created_at) %> ago.<span class="badge badge-info">Edited</span>:<%= time_ago_in_words(activity.updated_at) %> ago</small>
-           
-              <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-ellipsis-v"></i>
-                  </button>
-          
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">                   
-                    <%= link_to  content_tag(:i, "", class: "fas fa-compress"), activity_path(activity), class:"dropdown-item text-success" %>
-                    <%= link_to content_tag(:i, "", class: "fas fa-pencil-alt"), edit_activity_path(activity), class:"dropdown-item text-info" %>
-                    <%= link_to content_tag(:i, "", class: "fas fa-trash-alt"), activity_path(activity), class:"dropdown-item text-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-      <%end%> 
-
-
-      
-
-
+    <div class="flickr_pagination py-3">
+      <%= will_paginate @activities, :container => false %>
     </div>
 
 
