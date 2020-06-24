@@ -81,4 +81,7 @@ class ActivitiesController < ApplicationController
     def activity_params
       params.fetch(:activity, {}).permit(:name, :date, :start_time, :end_time)
     end
+
+   
+
 end

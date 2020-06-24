@@ -11,22 +11,22 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         
+          
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white font-weight-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Activity
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "View activities", activities_path, class: "dropdown-item font-weight-light"%>  
+
+          <% if user_signed_in? %>
+                <%= link_to "Create new activity", new_activity_path, class: "dropdown-item font-weight-light"%>
+              
+              </div>
+            </li>
+          <%end%>
           <li class="nav-item">
-            <a class="nav-link text-white font-weight-light" href="#">Link</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white font-weight-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Activity
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "Create new activity", new_activity_path, class: "dropdown-item font-weight-light"%>
-              <%= link_to "View activities", activities_path, class: "dropdown-item font-weight-light"%>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item font-weight-light" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled text-white font-weight-light" href="#" tabindex="-1" aria-disabled="true"><%= current_user.username if current_user %></a>
+            <a style="color: #1b6ca8" class="nav-link disabled font-weight-bold" href="#" tabindex="-1" aria-disabled="true"> <%= current_user.username.capitalize if current_user %></a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
