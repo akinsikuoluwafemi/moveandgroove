@@ -1,12 +1,12 @@
 class ActivitiesController < ApplicationController
   before_action :set_activity, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:show, :index]
 
   # GET /activities
   # GET /activities.json
   def index
     @activities = Activity.paginate(page: params[:page], per_page: 5)
     
-  
   end
 
   # GET /activities/1

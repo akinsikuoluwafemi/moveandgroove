@@ -38,9 +38,15 @@
                   <i class="fas fa-ellipsis-v"></i>
                   </button>
           
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">                   
-                    <%= link_to content_tag(:i, "", class: "fas fa-pencil-alt"), edit_activity_path(@activity), class:"dropdown-item text-info" %>
-                    <%= link_to content_tag(:i, "", class: "fas fa-trash-alt"), activity_path(@activity), class:"dropdown-item text-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
+                    <% if user_signed_in? && @activity.user == current_user %>                 
+                      <%= link_to content_tag(:i, "", class: "fas fa-pencil-alt"), edit_activity_path(@activity), class:"dropdown-item text-info" %>
+                      <%= link_to content_tag(:i, "", class: "fas fa-trash-alt"), activity_path(@activity), class:"dropdown-item text-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+                      <%else%>
+                      <%= link_to "You don't own this activity", "#", class:"dropdown-item text-info" %>
+
+
+                    <%end%>
                   </div>
                 </div>
               </div>
