@@ -5,8 +5,9 @@ class ActivitiesController < ApplicationController
   # GET /activities
   # GET /activities.json
   def index
-    @activities = Activity.paginate(page: params[:page], per_page: 5)
-    
+    @activities = Activity.order("id DESC").paginate(page: params[:page], per_page: 6)
+    # @activities = Activity.all
+
   end
 
   # GET /activities/1

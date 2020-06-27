@@ -28,34 +28,21 @@
                 </div>
               
               </div>
+                <div class="text-center">     
+                  <%= link_to "Edit", edit_activity_path(@activity), class:"btn-sm btn-info" %>
+                  <%= link_to "Delete", activity_path(@activity), class:"btn-sm btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
             </div>
       
             <div class="time-in shadow">
-              <small><span class="badge  badge-info">Created</span> : <%= time_ago_in_words(@activity.created_at) %> ago, <span class="badge badge-info">Edited</span> : <%= time_ago_in_words(@activity.updated_at) %> ago</small>
-           
-              <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fas fa-ellipsis-v"></i>
-                  </button>
-          
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
-                    <% if user_signed_in? && @activity.user == current_user %>                 
-                      <%= link_to content_tag(:i, "", class: "fas fa-pencil-alt"), edit_activity_path(@activity), class:"dropdown-item text-info" %>
-                      <%= link_to content_tag(:i, "", class: "fas fa-trash-alt"), activity_path(@activity), class:"dropdown-item text-danger", method: :delete, data: { confirm: 'Are you sure?' } %>
-                      <%else%>
-                      <%= link_to "You don't own this activity", "#", class:"dropdown-item text-info" %>
-
-
-                    <%end%>
-                  </div>
-                </div>
+              <small><span class="badge  badge-info">Created</span> : <%= time_ago_in_words(@activity.created_at) %> ago, <span class="badge badge-info">Edited</span> : <%= time_ago_in_words(@activity.updated_at) %> ago</small>   
               </div>
             </div>
           
 
-                
-                <%= link_to 'Back', activities_path %>
-          
+              <p class="text my-3"> 
+                <%= link_to 'Back', activities_path, class: "btn btn-success text-center text-white" %>
+              </p>
           </div> 
             <%#  %>
         </div>
