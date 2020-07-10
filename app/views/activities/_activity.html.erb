@@ -24,7 +24,10 @@
                   <div class="activity-stats">
                     <p class="activity-name font-italic"><%= link_to activity.name, activity_path(activity), class: "text-success"  %></p>
                     <p class="activity-date">On: <%= activity.date.strftime("%B/%d/%Y") %></p>
-                    <p class="activity-time">For About: 2hrs 30 min</p>
+                    <%# <p class="activity-time">For About: 2hrs 30 min</p> %>
+                    
+                    <p class="activity-time">For About: <%= TimeDifference.between(activity.start_time, activity.end_time).in_hours  %> hours</p>
+
                   </div>
                 
                 </div>

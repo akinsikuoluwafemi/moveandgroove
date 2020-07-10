@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'will_paginate', '~> 3.1.0'
 gem 'link_with_icon', '~> 0.0.1'
-
+gem 'time_difference'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

@@ -7,7 +7,6 @@ class ActivitiesController < ApplicationController
   def index
     @activities = Activity.order("id DESC").paginate(page: params[:page], per_page: 9)
     # @activities = Activity.all
-
   end
 
   # GET /activities/1
