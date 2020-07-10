@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col">
       <nav class="navbar navbar-expand-lg navbar-light">
-      <%= link_to "Move and Groove", root_path, class: "navbar-brand text-white", id:"logo"%>
+      <%= link_to "Move and Groove", root_path, class: "navbar-brand text-dark", id:"logo"%>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -11,16 +11,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         
-          
+          <% if user_signed_in? %>          
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white font-weight-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-dark font-weight-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Activity
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <%= link_to "View activities", activities_path, class: "dropdown-item font-weight-light"%>  
+              <%= link_to "View activities", activities_path, class: "dropdown-item font-weight-light text-dark"%>  
 
-          <% if user_signed_in? %>
-                <%= link_to "Create new activity", new_activity_path, class: "dropdown-item font-weight-light"%>
+                <%= link_to "Create new activity", new_activity_path, class: "dropdown-item font-weight-light text-dark"%>
               
               </div>
             </li>
@@ -32,11 +31,11 @@
         <form class="form-inline my-2 my-lg-0">
 
         <% if user_signed_in? %>
-          <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "auth font-weight-light" %></button>
+          <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "auth font-weight-light text-dark" %></button>
 
         <%else%>
-          <button class="btn btn-outline-success my-2 my-sm-0 " type="submit"><%= link_to "Sign In", new_user_session_path, class: "auth font-weight-light" %></button>
-          <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit"><%= link_to "Sign up for free", new_user_registration_path, class: "auth font-weight-light"%></button>
+          <button class="btn btn-outline-success my-2 my-sm-0 " type="submit"><%= link_to "Sign In", new_user_session_path, class: "auth font-weight-light text-dark" %></button>
+          <button class="btn btn-outline-success my-2 my-sm-0 ml-2" type="submit"><%= link_to "Sign up for free", new_user_registration_path, class: "auth font-weight-light text-dark"%></button>
 
         <%end%>
 
@@ -47,7 +46,6 @@
   </div>
 
 </div>
-
 
 
 

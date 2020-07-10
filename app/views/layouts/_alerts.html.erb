@@ -1,8 +1,19 @@
-<div style=" margin:auto;" class="alert alert-warning alert-dismissible fade show" role="alert">
-  <div class="notice" ><%=notice %></div>
-  <div class="alert" ><%=alert %></div>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
+<% if notice %>
+    <div style=" margin:auto;" class="alert alert-success alert-dismissible fade show" role="alert">
+    <%=notice %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <% elsif alert %>
+    <div style=" margin:auto;" class="alert alert-danger alert-dismissible fade show" role="alert">
+    <%=alert %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+<%end%>
+
 

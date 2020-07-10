@@ -23,11 +23,14 @@
 
       <div>
 
-        <div class="row" style="background:#7C9E8F">
+        <div class="row" style="background:#F5F5F5">
             <%= render "layouts/navigation"%>
         </div>
-        <%= render "layouts/alerts"%>
 
+        <% if notice || alert %>
+          <%= render "layouts/alerts"%>
+
+        <% end%>  
       </div>
 
     
