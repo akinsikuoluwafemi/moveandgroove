@@ -1,5 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  #config/production.rb
+  config.assets.compile = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -111,7 +114,3 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 end
 
-#config/production.rb
-APPLICATIONNAME::Application.configure do
-     config.assets.compile = true
-end
