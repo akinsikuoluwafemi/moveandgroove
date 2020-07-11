@@ -117,7 +117,7 @@ button:hover>.auth {
 .jumbotron {
     background: #FBF7ED;
     margin: 0;
-    background-image: url(yogateam.jpg);
+    background-image: url(yogateam.jpg)!important;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -283,12 +283,11 @@ small +.dropdown >.dropdown-toggle::after {
 }
 
 .bg-rowe {
-    background-image: url(sky.jpg);
+    background-image: url(sky.jpg)!important;
     background-color: #AAC9CE;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .bg-edit {
