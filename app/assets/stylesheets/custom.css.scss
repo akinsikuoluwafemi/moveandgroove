@@ -3,6 +3,7 @@
 
 body {
     font-family: 'Inconsolata', monospace; 
+    overflow-x: hidden;
 }
 
 footer a {
@@ -21,7 +22,11 @@ footer a:hover {
 
 }
 
-
+.logo {
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+}
 
 .badge-primary {
     background: #D3D3D3!important;
@@ -183,7 +188,22 @@ label {
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
-    background: #000;
+    background: linear-gradient(-45deg, #E5243B, #4C9F38, #10689D, #FB9D24 );
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 9s ease-in-out infinite;
+}
+
+@keyframes change {
+    from {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    to {
+        background-position: 0 50%;
+    }
 }
 
 .user-name {

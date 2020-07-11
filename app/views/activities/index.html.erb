@@ -1,25 +1,32 @@
 <div class="bg-rowe">
   <div class="container ">
-    <div class="notice"><%= notice %></div>
 
+    <% if current_user.activities.count < 1%>
+    <h1 class="text-center text-head text-white py-4">Create some activities 😊</h1>
 
-  
+    <% else %>
     <h1 class="text-center text-head text-white py-4">Activities Listing page</h1>
 
+    <% end %>
 
-     <div class="flickr_pagination py-3">
-      <%= will_paginate @activities, :container => false %>
 
-    </div>
+    <% if current_user.activities.count > 6 %>
+      <div class="flickr_pagination py-3">
+        <%= will_paginate @activities  , :container => false %>
+      </div>
+
+    <% end %>
 
    
     <%= render 'activity' %>
 
+    <%if current_user.activities.count > 6 %> 
 
       <div class="flickr_pagination py-3">
         <%= will_paginate @activities, :container => false %>
       </div>
 
+    <% end %>
 
       <p class="text">
       <%= link_to 'New Activity', new_activity_path , class: "btn btn-dark text-center"%>
