@@ -46,7 +46,7 @@
 
             <div class="controls" >
                 <%= form.label :date, class: 'text-white' %>
-                <%= form.date_field :date, data: { behavior: "flatpickr" } %>
+                <%= form.date_field :date, min: Date.today %>
             </div>
 
               <div class="controls">

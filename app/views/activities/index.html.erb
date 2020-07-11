@@ -6,21 +6,25 @@
   
     <h1 class="text-center text-head text-white py-4">Activities Listing page</h1>
 
+
      <div class="flickr_pagination py-3">
       <%= will_paginate @activities, :container => false %>
+
     </div>
+
    
     <%= render 'activity' %>
 
-    <div class="flickr_pagination py-3">
-      <%= will_paginate @activities, :container => false %>
-    </div>
+
+      <div class="flickr_pagination py-3">
+        <%= will_paginate @activities, :container => false %>
+      </div>
 
 
       <p class="text">
       <%= link_to 'New Activity', new_activity_path , class: "btn btn-dark text-center"%>
       </p>
-  </div>
+  </div> 
 </div>
 
 

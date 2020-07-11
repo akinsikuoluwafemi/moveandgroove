@@ -4,5 +4,5 @@ class Activity < ApplicationRecord
     validates :start_time, presence: true
     validates :end_time, presence: true
     belongs_to :user
-
+    self.per_page = 6
 end

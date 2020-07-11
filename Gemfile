@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
-gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate'
 gem 'link_with_icon', '~> 0.0.1'
 gem 'time_difference'
 # Use Active Storage variant
